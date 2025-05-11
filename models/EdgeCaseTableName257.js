@@ -3,7 +3,9 @@ const mongoose = require('../config/db');
 const edgeCaseSchema = new mongoose.Schema({
     name: { type: String, required: true },
     type: { type: String, required: true },
+    createdAt: { type: Date, default: Date.now },
+    updatedAt: { type: Date, default: Date.now },
 });
 
-const collection = 'd6rzb78fc053du8t6pntu93tmng46mxzqy6xyxecqvz3bjynkahwrbr30f2u3nqfxny5dytthtzvfic2yxifnn395dc3r7extp4rw1e086afxnn0hhnp7mktyjv9p6b3w11t4jd3yr9jpu63ewey0uk28x7bp671yayzrgtd1ru03v3tgn2fx5k0q9gfpii336iq6pxjabne4008wiy9z3pgr6zwe9c83451wbpvx58gxdrdwzpai43nk9kw7chxa';
+const collection = 'tbl_internationalized_content_localization_workflow_tasks_and_multilingual_translation_memory_cache_with_neural_machine_translation_quality_estimation_feedback_loops_and_region_specific_regulatory_compliance_flags_for_global_ecommerce_platform_release_candidate_9_long_term_support_branch';
 module.exports = mongoose.model('EdgeCase257', edgeCaseSchema, collection);

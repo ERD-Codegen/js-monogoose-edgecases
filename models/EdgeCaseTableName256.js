@@ -3,7 +3,9 @@ const mongoose = require('../config/db');
 const edgeCaseSchema = new mongoose.Schema({
     name: { type: String, required: true },
     type: { type: String, required: true },
+    createdAt: { type: Date, default: Date.now },
+    updatedAt: { type: Date, default: Date.now },
 });
 
-const collection = 'd6rzb78fc053du8t6pntu93tmng46mxzqy6xyxecqvz3bjynkahwrbr30f2u3nqfxny5dytthtzvfic2yxifnn395dc3r7extp4rw1e086afxnn0hhnp7mktyjv9p6b3w11t4jd3yr9jpu63ewey0uk28x7bp671yayzrgtd1ru03v3tgn2fx5k0q9gfpii336iq6pxjabne4008wiy9z3pgr6zwe9c83451wbpvx58gxdrdwzpai43nk9kw7chx';
+const collection = 'tbl_genomic_variant_annotation_repository_with_privacy_preserving_homomorphic_encryption_backed_indexing_for_population_scale_cohort_analysis_and_clinical_trial_matching_across_multi_modal_omics_profiles_including_single_cell_rna_seq';
 module.exports = mongoose.model('EdgeCase256', edgeCaseSchema, collection);
